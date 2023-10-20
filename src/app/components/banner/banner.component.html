@@ -1,0 +1,19 @@
+<ion-row class="borderBottom" *ngIf="bannerImages.length > 0">
+  <div>
+    <!-- modules para poder darle propiedades como slidesPerView, (doubletap)=handleDoubletap(), autoplay, initialSlide
+    dynamicBullets son las pelotitas de abajo,
+    clickable si puede hacerse click,
+    keyboard para poder usar las flechas del teclado para cambiar de slide
+    -->
+    <swiper-container
+    [modules]="swiperModules"
+    [slidesPerView]="1"
+    [spaceBetween]="20"
+    [keyboard]="true"
+    [pagination]="{clickable: true, dynamicBullets: true}">
+    <swiper-slide *ngFor="let image of bannerImages">
+      <img [src]="image?.banner" />
+    </swiper-slide>
+  </swiper-container>
+  </div>
+</ion-row>

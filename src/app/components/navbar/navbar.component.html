@@ -1,0 +1,58 @@
+<div
+  class="bg-white text-black h-[60px] flex items-center border-b border-gray-300"
+  *ngIf="authenticated; else unauthenticatedNavbar"
+>
+  <div class="font-bold text-2xl pl-14 cursor-pointer">
+    {{ APP_NAME }}
+  </div>
+  <div class="pl-14 flex items-end h-full gap-4">
+    <div
+      (click)="handleChangePage(PAGES_NAMES.HOME)"
+      class="cursor-pointer pb-3 flex items-center gap-1"
+      [ngClass]="{
+        'border-b-2 border-black': storeAppCurrentPage === PAGES_NAMES.HOME
+      }"
+    >
+      <ion-icon name="home"></ion-icon>
+      Home
+    </div>
+    <div
+      (click)="handleChangePage(PAGES_NAMES.SERVICES)"
+      class="cursor-pointer pb-3 flex items-center gap-1"
+      [ngClass]="{
+        'border-b-2 border-black': storeAppCurrentPage === PAGES_NAMES.SERVICES
+      }"
+    >
+      <ion-icon name="apps"></ion-icon>
+      Services
+    </div>
+    <div
+      (click)="handleChangePage(PAGES_NAMES.ACTIVITY)"
+      class="cursor-pointer pb-3 flex items-center gap-1"
+      [ngClass]="{
+        'border-b-2 border-black': storeAppCurrentPage === PAGES_NAMES.ACTIVITY
+      }"
+    >
+      <ion-icon name="car-sport"></ion-icon>
+      Activity
+    </div>
+    <div
+      (click)="handleChangePage(PAGES_NAMES.ACCOUNT)"
+      class="cursor-pointer pb-3 flex items-center gap-1"
+      [ngClass]="{
+        'border-b-2 border-black': storeAppCurrentPage === PAGES_NAMES.ACCOUNT
+      }"
+    >
+      <ion-icon name="person"></ion-icon>
+      Profile
+    </div>
+  </div>
+</div>
+
+<ng-template #unauthenticatedNavbar>
+  <div
+    class="bg-black text-white h-[60px] flex items-center pl-14 font-bold text-2xl"
+  >
+    {{ APP_NAME }}
+  </div>
+</ng-template>

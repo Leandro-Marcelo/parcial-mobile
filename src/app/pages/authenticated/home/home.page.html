@@ -1,0 +1,95 @@
+<ion-content>
+  <div class="h-screen">
+    <!-- Mobile Section -->
+    <ng-container *ngIf="isMobile">
+      <div class="flex justify-center gap-4">
+        <div class="flex items-center">
+          <img src="assets/imgs/ride.png" alt="Rides" class="w-10 h-10" />
+          <div class="text-2xl font-bold">Rides</div>
+        </div>
+        <div class="flex items-center">
+          <img src="assets/imgs/orders.webp" alt="Orders" class="w-8 h-8" />
+          <div class="text-2xl font-bold">Orders</div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Input and Options -->
+    <div class="px-4 pt-6 mb-4">
+      <ion-input
+        type="text"
+        placeholder="Enter pickup location"
+        class="bg-gray-300 outline-none border-none h-10 w-full rounded-full px-4"
+        (click)="handlePickupLocation()"
+      ></ion-input>
+    </div>
+    <div class="flex flex-col gap-4 px-4 mb-8">
+      <div
+        class="flex items-center p-2 bg-gray-300 rounded-full cursor-pointer hover:bg-gray-400"
+      >
+        <ion-img src="assets/svg/plus.svg" class="w-7 h-7"></ion-img>
+        <div class="text-lg">Choose a saved place</div>
+      </div>
+      <div
+        class="flex items-center p-2 bg-gray-300 rounded-full cursor-pointer hover:bg-gray-400"
+      >
+        <ion-img src="assets/svg/map.svg" class="w-7 h-7"></ion-img>
+        <div class="text-lg">Set destination on map</div>
+      </div>
+    </div>
+
+    <!-- Suggestions -->
+    <div class="flex justify-between items-center px-4 mb-4">
+      <div class="font-bold text-xl">Suggestion</div>
+      <div class="text-lg cursor-pointer hover:underline">See All</div>
+    </div>
+    <div class="grid grid-cols-4 gap-2 px-2 mb-4">
+      <!-- (You can use an *ngFor here if you have an array of items to loop through) -->
+      <div class="col-span-1">
+        <div class="bg-gray-300 rounded-xl py-1 px-0 mb-2 flex justify-center">
+          <img src="assets/imgs/ride.png" alt="Ride" class="w-14 h-14" />
+        </div>
+        <div class="text-center text-sm">Ride</div>
+      </div>
+      <div class="col-span-1">
+        <div class="bg-gray-300 rounded-xl py-1 px-0 mb-2 flex justify-center">
+          <img src="assets/imgs/package.webp" alt="Ride" class="w-14 h-14" />
+        </div>
+        <div class="text-center text-sm">Package</div>
+      </div>
+      <div class="col-span-1">
+        <div class="bg-gray-300 rounded-xl py-1 px-0 mb-2 flex justify-center">
+          <img src="assets/imgs/twoWheels.webp" alt="Ride" class="w-14 h-14" />
+        </div>
+        <div class="text-center text-sm">2-Wheels</div>
+      </div>
+      <div class="col-span-1">
+        <div class="bg-gray-300 rounded-xl py-1 px-0 mb-2 flex justify-center">
+          <img src="assets/imgs/groupRide.webp" alt="Ride" class="w-14 h-14" />
+        </div>
+        <div class="text-center text-sm">Group Ride</div>
+      </div>
+    </div>
+
+    <div class="px-4 h-[100px] w-full bg-red-500">
+      <swiper-container>
+        <swiper-slide>
+          <div class="grid grid-cols-12 h-[130px] bg-green-500">
+            <div class="col-span-10 flex flex-col justify-center">
+              <div class="font-bold">Haz envíos sin salir de casa</div>
+              <div class="text-sm">Solicita Uber Flash</div>
+            </div>
+            <div class="col-span-2 bg-gray-300 rounded-lg">
+              <img src="assets/imgs/groupRide.webp" alt="" class="w-16 h-16" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="w-full h-[130px] bg-blue-500">
+            <img src="assets/imgs/ride.png" alt="" class="w-16 h-16" />
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</ion-content>

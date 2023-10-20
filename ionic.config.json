@@ -1,0 +1,7 @@
+{
+  "name": "geo-l",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="w-full h-screen flex flex-col relative">
+    
+    <!-- Navbar -->
+    <ng-container *ngIf="!isMobile">
+      <app-navbar></app-navbar>
+    </ng-container>
+
+    <!-- Mobile Back Button -->
+    <ng-container *ngIf="isMobile">
+      <div class="absolute top-3 left-3 z-30">
+        <ion-back-button defaultHref="/path-to-home" color="light"></ion-back-button>
+      </div>
+    </ng-container>
+
+    <div class="flex flex-col-reverse xl:grid xl:grid-cols-12 h-full xl:py-4">
+      <!-- ... (Rest of the HTML code goes here) ... -->
+    </div>
+
+    <!-- Modal for Mobile -->
+    <ng-container *ngIf="isMobile && showPlanYourRideComponents.selectRide">
+      <app-form-ride></app-form-ride>
+    </ng-container>
+
+    <!-- Modal Chat (uncomment when needed) -->
+    <!-- <app-modal-chat [showModalChat]="showModalChat"></app-modal-chat> -->
+
+  </div>
+</ion-content>

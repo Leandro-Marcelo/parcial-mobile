@@ -1,0 +1,44 @@
+<ion-content>
+
+  <ng-container *ngIf="!isMobile">
+    <app-navbar></app-navbar>
+  </ng-container>
+
+  <div class="flex flex-col-reverse md:flex-row px-4 md:px-20 mb-4">
+    <div class="md:pr-20">
+      <h2 class="text-3xl font-bold mb-8">
+        Sorry, we couldn't find that page
+      </h2>
+      <p class="mb-12">
+        We have shifted a few things around, and your page must have
+        gotten lost. Try retyping the address or just head back to our
+        home page.
+      </p>
+      <div class="flex flex-col gap-8">
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL.com</span>
+        </a>
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL for Business</span>
+        </a>
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL Careers</span>
+        </a>
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL Eats for Merchants</span>
+        </a>
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL Freight</span>
+        </a>
+        <a class="text-black text-xl hover:border-black transition-all">
+          <span class="border-b-2 border-gray-500">Go to GeoL Health</span> 
+        </a>
+      </div>
+    </div>
+    <div class="py-4 md:pt-0">
+      <img src="assets/imgs/notFoundMobile.webp" alt="Semaforo Rojo" class="block md:hidden">
+      <img src="assets/imgs/notFoundDesktop.webp" alt="Semaforo Rojo" class="hidden md:block">
+    </div>
+  </div>
+
+</ion-content>
