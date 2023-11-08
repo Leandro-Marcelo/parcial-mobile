@@ -3,7 +3,7 @@ import { NavController } from '@ionic/angular';
 import { AppSliceService } from 'src/app/store/app/app-slice.service';
 import { AuthSliceService } from 'src/app/store/auth/auth-slice.service';
 import { APP_NAME, PAGES_NAMES } from 'src/app/utils/constants';
-import { PagesNamesType } from 'src/app/utils/typesAndInterfaces';
+import { PagesNamesType } from '../../../../../geo-l-react-ionic/src/utils/typesAndInterfaces';
 
 @Component({
   selector: 'app-navbar',

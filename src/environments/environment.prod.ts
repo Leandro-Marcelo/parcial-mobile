@@ -4,5 +4,5 @@ export const environment = {
   MODE: "",
   PROD: false,
   DEV: true,
-  GOOGLE_MAPS_API_KEY: "API_KEY_GOOGLE_CLOUD",
+  GOOGLE_MAPS_API_KEY: "",
 };

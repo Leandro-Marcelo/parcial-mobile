@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AUTHENTICATED_ROUTES, AUTH_GOOGLE_LINK, PUBLIC_ROUTES } from '../../../utils/constants';
+import { AUTHENTICATED_ROUTES, PUBLIC_ROUTES } from 'src/app/utils/constants';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { RestcountriesService } from 'src/app/services/restcountries/restcountries.service';
@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
   selectedCountry: Country = this.defaultCountry
   phoneNumber = '';
   countries: Country[] = [];
-  AUTH_GOOGLE_LINK = AUTH_GOOGLE_LINK;
+  AUTH_GOOGLE_LINK = "";
 
   isMobile = window.innerWidth <= 768;
 

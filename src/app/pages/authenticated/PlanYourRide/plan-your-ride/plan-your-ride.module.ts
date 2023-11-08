@@ -8,6 +8,7 @@ import { PlanYourRidePageRoutingModule } from './plan-your-ride-routing.module';
 
 import { PlanYourRidePage } from './plan-your-ride.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MapComponent } from 'src/app/components/map/map.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
     PlanYourRidePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [PlanYourRidePage]
+  declarations: [PlanYourRidePage, MapComponent]
 })
 export class PlanYourRidePageModule {}

@@ -18,7 +18,7 @@ import {
   MARKER_POSITION_RESET,
   RIDE_INFO_RESET,
   SELECTED_RIDE_RESET,
-} from '../../../../../geo-l-react-ionic/src/utils/constants';
+} from 'src/app/utils/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -34,7 +34,22 @@ export class RideSliceService {
       status: '',
       travelMode: '',
     },
-    originMarkerPosition: MARKER_POSITION_RESET,
+    markerPosition: MARKER_POSITION_RESET,
+
+    formRide: {
+      originLocation: {
+        lat: 0,
+        lng: 0,
+        name: '',
+      },
+      destinationLocation: {
+        lat: 0,
+        lng: 0,
+        name: '',
+      },
+    },
+    isSettingOrigin: true,
+    firstLoadingMap: true,
     // DRIVER
     prevCurrentRideDriver: ESTIMATED_RIDE_RESET,
     currentRideDriver: ESTIMATED_RIDE_RESET,
@@ -54,7 +69,7 @@ export class RideSliceService {
   }
 
   setOriginMarkerPositionReducer(originMarkerPosition: MarkerPosition) {
-    this.storeRide.originMarkerPosition = originMarkerPosition;
+    this.storeRide.markerPosition = originMarkerPosition;
   }
 
   setPrevCurrentRideDriverReducer(estimatedRide: EstimatedRide) {

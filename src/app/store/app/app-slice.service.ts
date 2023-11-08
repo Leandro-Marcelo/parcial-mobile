@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   PAGES_NAMES,
   SHOW_PLAN_YOUR_RIDE_COMPONENTS_RESET,
-} from '../../../../../geo-l-react-ionic/src/utils/constants';
+} from 'src/app/utils/constants';
 import {
   PagesNamesType,
   ShowPlanYourRideComponents,

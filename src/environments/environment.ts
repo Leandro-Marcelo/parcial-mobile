@@ -4,11 +4,15 @@
 
 export const environment = {
   production: false,
-  REST_API: "http://localhost:4000",
+  API_HTTP_AUTH: "http://localhost:4000",
+  API_HTTP_PAYMENT: "http://localhost:3001",
+  API_HTTP_MAIL: "http://localhost:3002",
+  API_HTTP_CHAT: "http://localhost:3003",
+  API_WS_CHAT: "ws://localhost:3003",
   MODE: "",
   PROD: false,
   DEV: true,
-  GOOGLE_MAPS_API_KEY: "API_KEY_GOOGLE_CLOUD",
+  GOOGLE_MAPS_API_KEY: "",
 };
 
 /*

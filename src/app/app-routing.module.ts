@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/authenticated/tabs.module').then( m => m.TabsPageModule)
   },
   {
-    path: 'login',
+    path: 'continue-with',
     loadChildren: () => import('./pages/publicPages/login/login.module').then( m => m.Loginv2PageModule)
   },
   {
@@ -27,7 +27,10 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./pages/publicPages/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
-  // create not found
+  {
+    path: 'plan-your-ride',
+    loadChildren: () => import('../app/pages/authenticated/PlanYourRide/plan-your-ride/plan-your-ride.module').then( m => m.PlanYourRidePageModule)
+  },
   {
     path: '**',
     loadChildren: () => import('./pages/publicPages/not-found/not-found.module').then( m => m.NotFoundPageModule)
